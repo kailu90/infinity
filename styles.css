@@ -89,6 +89,19 @@ main {
 }
 
 
+@media (max-width: 800px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .header_btn {
+        display: none;
+    }
+   
+}
+
+
 
 
 
@@ -183,6 +196,11 @@ main {
 
 @media (max-width: 1024px) {
 
+    .main_banner .description h2 {
+        font-size: 40px;       
+        line-height: 50px;   
+    }
+
     .main_banner .description, .main_banner .image {
         max-width: 90vw;
         padding: 0;
@@ -193,9 +211,24 @@ main {
         margin: 50px 0;
     }
 
+    .main_banner .description p {
+        font-size: 16px;       
+        line-height: 20px;       
+    }
+
     .main_banner {
        flex-direction: column;
+       padding: 20px;
     }
+
+    .main_banner .image img {
+        max-width: 150px;
+    }
+
+    .main_banner .image {
+        grid-gap: 15px;
+    }
+    
 
     
 }
@@ -223,16 +256,16 @@ main {
 
 .main_partners p {
     font-size: 20px;
-    margin: 20px 0;
+    padding: 20px;
 }
 
 .partners {
     width: 100%; 
     max-width: 1000px; 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    justify-items: center;  
+    justify-content: center;  
     margin: 0 auto;  
 }
 
@@ -242,6 +275,8 @@ main {
     height: 100px;
     border-radius: 30px;  
     padding: 20px;  
+    object-fit: contain;
+    margin: 0 20px;   
 }
 
 .partners img:nth-child(1) {
@@ -249,7 +284,20 @@ main {
 }
 
 
+@media (max-width: 1024px) {
 
+    .main_partners p {
+        font-size: 16px;       
+    }
+     
+    /*.partners img {
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+    }*/
+
+    
+}
 
 
 
@@ -274,7 +322,7 @@ main {
 .main_benefits p {  
     color: #2C77B0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px 0;
 }
 
@@ -284,11 +332,10 @@ main {
 
 .main_benefits__cards {
     width: 100%;
-    max-width: 1000px;   
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 30px;
-    justify-items: center;
+    max-width: 1200px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -298,9 +345,10 @@ main {
     align-items: flex-start;
     justify-content: center;
     border: 2px solid #999999;
-    min-height: 200px;
-    max-width: 300px;
+    height: 200px;
+    width: 260px;
     padding: 20px;
+    margin: 10px 20px;
 }
 
 .main_benefits__cards .card img {
@@ -318,9 +366,19 @@ main {
 @media (max-width: 1024px) {
 
     .main_benefits {
-        padding: 50px;
+        padding: 20px;
+        justify-content: center;
     }
     
+    .main_benefits h2 {
+        font-size: 20px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .main_benefits p {
+        font-size: 16px;
+    }
 }
 
 
@@ -341,8 +399,7 @@ main {
 
 .main_schedule .description , .main_schedule .image {
     display: flex;
-    flex-direction: column; 
-    max-width: 50vw;  
+    flex-direction: column;     
     padding: 0 50px; 
 }
 
@@ -393,7 +450,24 @@ main {
         justify-content: center;
         align-items: center;
         text-align: center;
-        justify-items: center;        
+        justify-items: center;              
+    }
+
+    .main_schedule .description {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .main_schedule .description h2 {        
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .main_schedule .description p {        
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .main_schedule .description .btn {
@@ -403,6 +477,11 @@ main {
     .main_schedule .image {
         margin-top: 50px;
         padding: 0;
+    }
+
+    .main_schedule .image img {
+        width: 80%;
+        margin: 0 auto;
     }
 
     .main_schedule .description, .main_schedule .image {
@@ -418,11 +497,13 @@ main {
 
 
 .main_programs {    
+    width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 .main_programs h2, .main_programs p {
@@ -440,7 +521,6 @@ main {
     padding: 50px;
     margin: 0 auto;
 }
-
 
 .programs__cards {    
     width: 100vw;
@@ -470,20 +550,15 @@ main {
 
 .programs__cards .card img {
     width: 100%;
-    height: 40%;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.programs__cards .card p {
-    font-size: 14px;  
-    padding: 10px 0 30px 0; 
-}
-
 .programs__cards .card .card__paragraph {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;   
+    justify-content: center; 
     align-items: center;
     width: 100%;
     height: 60%;
@@ -491,10 +566,39 @@ main {
     color: #F5F5F5;
 }
 
-.programs__cards .card .card__paragraph p:nth-child(1) {
-    font-weight: bold;
+.programs__cards .card .card__paragraph p {
+    font-size: 14px;
+    padding: 0;
 }
 
+.programs__cards .card .card__paragraph p:nth-child(1) {
+    display: flex;
+    font-weight: bold;
+    height: 50px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .main_programs {
+        padding: 50px 0;
+    }
+
+    .main_programs h2 {
+        width: 90%;
+        font-size: 32px;
+        margin: 0 auto;
+        padding: 0;
+    }
+     
+    .main_programs p:nth-child(2) {
+        width: 80%;
+        margin: 20px auto; 
+        padding: 0;
+    }
+}
 
 
 
@@ -560,7 +664,7 @@ main {
     }
 
     .main_dreams .image {
-        max-width: 500px;       
+        width: 90vw;
     }
 
     .main_dreams .image::after {
@@ -576,6 +680,14 @@ main {
         align-items: center;
         text-align: center;
         padding: 0;
+    }
+
+    .main_dreams .paragraph h2 {
+        font-size: 32px;
+    }
+
+    .main_dreams .paragraph p {
+        font-size: 16px;
     }
   
 }
@@ -682,6 +794,14 @@ main {
     .testimonials__cards .arrow_right {
         display: none;
     }
+    
+    .main_testimonials h2 {
+        font-size: 32px;
+    }
+
+    .main_testimonials p {
+        font-size: 12px;
+    }
 }
 
 
@@ -741,13 +861,14 @@ main {
 
 .icons_social {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .icons_social img {
     width: 20px;
     margin: 0 5px;   
- }
-
+}
 
 
 @media (max-width: 1024px) {
@@ -765,7 +886,14 @@ main {
     }
     
     .footer .assets {
-        margin-top: 30px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .assets .assets_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
   
 }
