@@ -540,6 +540,7 @@ main {
     height: 400px;
     width: 300px;
     background-color: #2C77B0;   
+    color: #F5F5F5;
 }
 
 .programs__cards .card img {
@@ -551,12 +552,11 @@ main {
 .programs__cards .card .card__paragraph {
     display: flex;
     flex-direction: column;   
-    justify-content: space-around; 
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     height: 60%;
     padding: 20px;
-    color: #F5F5F5;
 }
 
 .programs__cards .card .card__paragraph p {
@@ -569,7 +569,10 @@ main {
     font-weight: bold;
     height: 50px;
     align-items: center;
-    padding: 10px 0;
+}
+
+.programs__cards .card .card_subtitle p {
+    font-weight: bold;   
 }
 
 .programs__cards .card .card__paragraph .card_description {
