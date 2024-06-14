@@ -697,15 +697,16 @@ main {
 /*******************?TESTIMONIALS*******************/
 
 .main_testimonials {
-    width: 100vw;    
+    width: 100vw;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
     background-color: #F5F5F5;
     padding: 50px 0;
     overflow: hidden;
+    position: relative; /* Añadir para posicionar las flechas */
 }
 
 .main_testimonials h2 {  
@@ -715,26 +716,29 @@ main {
 }
 
 .testimonials__cards {
-    width: max-content; 
-    display: flex;   
-    position: relative;
-    justify-content: flex-start;   
-    gap: 40px; 
-    overflow-x: scroll;
+    width: 90%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.testimonials__cards::-webkit-scrollbar { 
+    display: none; 
 }
 
 .testimonials__cards .card {
-    display: flex;  
+    scroll-snap-align: center;
+    display: flex;
     align-items: center;
-    max-width: 40vw;
-    background-color: #E6E6E6;  
-    padding: 30px;  
-    gap: 30px;
-    font-weight: 500;   
+    background-color: #E6E6E6;
+    padding: 30px;
+    margin-right: 40px; 
+    font-weight: 500;
 }
 
-.testimonials__cards .card .image {   
-    width: 10%;
+.testimonials__cards .card .image {
+    width: 20%;
 }
 
 .testimonials__cards .card .image img {
@@ -742,34 +746,38 @@ main {
     border-radius: 50%;
 }
 
-.testimonials__cards .card .description {   
+.testimonials__cards .card .description {
     width: 80%;
-    text-align: left;   
+    text-align: left;
 }
 
-.testimonials__cards .card .description p:nth-child(2){   
+.testimonials__cards .card .description p:nth-child(2) {
     margin-top: 20px;
-    color: #DA3731;   
+    color: #DA3731;
 }
 
-.testimonials__cards .arrow_left {
-    width: 20px;
-    rotate: 180deg;
+.arrow_left,
+.arrow_right {
+    width: 40px; /* Aumenta el tamaño para mejor visibilidad */
+    height: 40px;
+    background-color: #DA3731;
+    mask: url('./img/flecha.png') no-repeat center;
+    -webkit-mask: url('./img/flecha.png') no-repeat center;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - 10px);
-    left: 50px;
-} 
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-.testimonials__cards .arrow_right {
-    width: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: calc(50% - 10px);
-    right: 50px;
-} 
+.arrow_left {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+}
 
-
+.arrow_right {
+    right: 10px;
+    transform: translateY(-50%);
+}
 
 @media (max-width: 1024px) {
 
@@ -840,11 +848,15 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+    text-align: center;
 }
 
-.assets .assets_list li {
+.assets_list li {
     width: 200px; 
-    cursor: pointer;  
+    display: flex;
+    justify-content: center;
+    cursor: pointer; 
+    text-align: center; 
 }
 
 .assets__icons div {
@@ -858,9 +870,21 @@ main {
     justify-content: center;
 }
 
+.icons_social a {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .icons_social img {
     width: 20px;
-    margin: 0 5px;   
+    margin: 0 5px;  
+    align-items: center; 
+}
+
+.icons_social .icon_facebook {
+    width: 30px;
 }
 
 
