@@ -1,3 +1,5 @@
+/*Estilos generales de la landing page*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,21 +21,10 @@ li {
     border-radius: 30px;
 }
 
-/*:root {
-    --primary-color: #54C5F3;
-    --primary-contrast:#000C5A;    
-    --secondary: #DA3731;
-    --secondary-contrast:#6E120B;
-    --neutro:#2C77B0;
-    --hightlight:#9FDDEC;
-    --hightlight-contrast: #4bb1d3;
-}*/
-
 .title {
     font-size: 30px;
     font-weight: bold;
 }
-
 
 main {
     font-family: "Poppins", sans-serif;
@@ -43,7 +34,12 @@ main {
 
 
 
+
+
+
 /*******************?HEADER*******************/
+
+/*Estilos del header*/
 
 .header_container {
     width: 100vw; 
@@ -66,18 +62,12 @@ main {
     width: 100%;
 }
 
-.header_btn {
-    display: flex;
-    gap: 20px;    
-}
-
 .header_btn button {
-    padding: 5px 30px;
     background-color: transparent;
     border: 2px solid #999999;
     cursor: pointer;
     color: #999999;
-    font-weight: 400;
+    padding: 5px 30px;
 }
 
 .header_btn button:hover {
@@ -101,6 +91,9 @@ main {
 
 
 /*******************?BANNER********************/
+
+
+/*Estilos de la primera sección de toda la landing page*/
 
 .main_banner {
     width: 100vw;    
@@ -237,6 +230,8 @@ main {
 
 /*******************?PARTNERS********************/
 
+/*Estilos de los logos de los que apoyan el proyecto*/
+
 
 .main_partners {
     width: 100vw;
@@ -278,25 +273,24 @@ main {
     padding: 0;
 }
 
-
 @media (max-width: 1024px) {
 
     .main_partners p {
         font-size: 16px;       
     }
-     
-    /*.partners img {
-        width: 100px;
-        height: 50px;
-        border-radius: 10px;
-    }*/
-
     
 }
 
 
 
+
+
+
+
+
 /*******************?BENEFITS********************/
+
+/*Estilos de la sección de Beneficios de nuestro programa*/
 
 .main_benefits {   
     display: flex;
@@ -308,9 +302,6 @@ main {
 .main_benefits h2 {
     font-size: 40px;
     padding: 20px;
-}
-
-.main_benefits h2 {  
     color: #DA3731;
 }
 
@@ -352,11 +343,18 @@ main {
     border-radius: 20px;
 }
 
-
-
 .main_benefits__cards .card p {
     color: #000C5A;
 }
+
+/*Ultimas dos tarjetas de la sección de Beneficios*/
+
+.cards_asesory {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 
 @media (max-width: 1024px) {
 
@@ -381,7 +379,11 @@ main {
 
 
 
+
+
 /*******************?SCHEDULE********************/
+
+/*Estilos de la sección donde se puede agendar asesoria*/
 
 .main_schedule {
     width: 100vw;
@@ -487,8 +489,11 @@ main {
 
 
 
+
+
 /*******************?PROGRAMS*******************/
 
+/*Estilos de sección de los programas académicos, con tarjetas*/
 
 .main_programs {    
     width: 100vw;
@@ -523,12 +528,6 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     justify-items: center;
-    margin: 0 auto;
-}
-
-.cards_asesory {
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
 }
 
@@ -605,6 +604,8 @@ main {
 
 
 /*******************?DREAMS*******************/
+
+/*Estilos de sección que habla sobre hacer realidad tus sueños*/
 
 .main_dreams {   
     width: 100vw;   
@@ -697,7 +698,11 @@ main {
 
 
 
+
+
 /*******************?TESTIMONIALS*******************/
+
+/*Estilos de slider de los testimonios*/
 
 .main_testimonials {
     width: 100vw;
@@ -708,8 +713,6 @@ main {
     align-items: center;
     background-color: #F5F5F5;
     padding: 50px 0;
-    overflow: hidden;
-    position: relative;
 }
 
 .main_testimonials h2 {  
@@ -718,21 +721,19 @@ main {
     font-size: 40px;
 }
 
-.cards_container {
-    position: relative;
+.cards_container {   
     width: 100vw;
     max-width: 1300px;
     display: flex;
     margin: 0 auto;
     padding: 0 30px;
     overflow: scroll;
-    scroll-snap-type: proximity;
+    scroll-snap-type: mandatory;
 }
 
 .testimonials__cards {
     width: 1400px;
     display: flex;
-    flex-wrap: nowrap;  
     position: relative;
     padding: 0 100px;
 }
@@ -745,8 +746,9 @@ main {
     padding: 30px;
     margin-right: 40px; 
     font-weight: 500;
-    scroll-snap-align: center;
 }
+
+/*Se retira el margen derecho a última tarjeta para mejorar vista*/
 
 .cards_container .card_ultimate {
     margin-right: 0;
@@ -782,17 +784,15 @@ main {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
 }
 
 .arrow_left {
     left: 50px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .arrow_right {
     right: 50px;
-    transform: translateY(-50%);
 }
 
 @media (max-width: 1024px) {
@@ -822,23 +822,22 @@ main {
         font-size: 12px;
     }
 
-    @media (max-width: 600px) {
-        .cards_container {
-            max-width: 380px;            
-        }
-
-        .testimonials__cards .card {  
-            margin: 30px 0;
-            margin-right: 30px;
-            padding: 20px;
-        }
-    
-
-        .testimonials__cards .card .description p {
-            font-size: 8px;
-        }
-    
+@media (max-width: 600px) {
+    .cards_container {
+        max-width: 380px;            
     }
+
+    .testimonials__cards .card {  
+        margin: 30px 0;
+        margin-right: 30px;
+        padding: 20px;
+    }    
+
+    .testimonials__cards .card .description p {
+        font-size: 8px;
+    }
+    
+}
 
 }
 
@@ -850,6 +849,8 @@ main {
 
 
 /*******************?FOOTER******************/
+
+/*Estilos del footer*/
 
 .footer_container {
     width: 100vw;
