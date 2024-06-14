@@ -745,9 +745,8 @@ main {
     scroll-snap-align: center;
 }
 
-.cards_container .card:nth-child(4) {
-    padding: 30px;
-    margin: 30px 0;
+.cards_container .card_ultimate {
+    margin-right: 0;
 }
 
 .testimonials__cards .card .image {
