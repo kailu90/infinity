@@ -4,10 +4,15 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
 li {
    list-style: none;
    text-decoration: none; 
-   color: #fff;
+   color: #F5F5F5;
 }
 
 .border_radius {
@@ -50,7 +55,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 10px 50px;
+    padding: 10px 40px;
 }
 
 .header_img {
@@ -89,17 +94,7 @@ main {
 }
 
 
-@media (max-width: 800px) {
 
-    .header {
-        justify-content: center;
-    }
-
-    .header_btn {
-        display: none;
-    }
-   
-}
 
 
 
@@ -439,8 +434,7 @@ main {
 }
 
 .main_schedule .image img {
-    width: 100%;
-    height: 100%;
+    width: 100%;   
 }
 
 @media (max-width: 1024px) {
@@ -543,14 +537,13 @@ main {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    max-height: 400px;
+    height: 400px;
     width: 300px;
     background-color: #2C77B0;   
 }
 
 .programs__cards .card img {
-    width: 100%;
-    height: 150px;
+    width: 100%;    
     object-fit: cover;
     border-radius: 10px;
 }
@@ -558,7 +551,7 @@ main {
 .programs__cards .card .card__paragraph {
     display: flex;
     flex-direction: column;   
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center;
     width: 100%;
     height: 60%;
@@ -571,14 +564,18 @@ main {
     padding: 0;
 }
 
-.programs__cards .card .card__paragraph p:nth-child(1) {
+.programs__cards .card .card__paragraph .card_subtitle {
     display: flex;
     font-weight: bold;
     height: 50px;
     align-items: center;
-    padding-bottom: 20px;
+    padding: 10px 0;
 }
 
+.programs__cards .card .card__paragraph .card_description {
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 1024px) {
 
@@ -620,7 +617,6 @@ main {
 
 .main_dreams .image img { 
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -709,6 +705,7 @@ main {
     align-items: center;
     background-color: #F5F5F5;
     padding: 50px 0;
+    overflow: hidden;
 }
 
 .main_testimonials h2 {  
@@ -718,22 +715,22 @@ main {
 }
 
 .testimonials__cards {
-    width: 100vw;
-    height: max-content;
+    width: max-content; 
+    display: flex;   
     position: relative;
-    display: flex;
-    justify-content: center;   
-    gap: 40px;
+    justify-content: flex-start;   
+    gap: 40px; 
+    overflow-x: scroll;
 }
 
 .testimonials__cards .card {
-    display: flex;
+    display: flex;  
     align-items: center;
-    max-width: 40%;
+    max-width: 40vw;
     background-color: #E6E6E6;  
     padding: 30px;  
     gap: 30px;
-    font-weight: 500;
+    font-weight: 500;   
 }
 
 .testimonials__cards .card .image {   
@@ -776,10 +773,6 @@ main {
 
 @media (max-width: 1024px) {
 
-    .testimonials__cards {
-        flex-direction: column;
-        gap: 0;
-    }  
 
     .testimonials__cards .card {
         width: 90vw;
