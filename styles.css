@@ -717,20 +717,18 @@ main {
 
 .cards_container {
     position: relative;
-    width: 100vw;
+    max-width: 1300px;
     display: flex;
     margin: 0 auto;
-    padding: 0 150px;
+    padding: 0 30px;
     overflow: scroll;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: proximity;
 }
 
 .testimonials__cards {
-    width: max-content;
+    width: 1400px;
     display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
-
+    flex-wrap: nowrap;  
     position: relative;
     padding: 0 100px;
 }
@@ -746,7 +744,7 @@ main {
     scroll-snap-align: center;
 }
 
-.testimonials__cards .card:nth-child(6) {
+.cards_container .card:nth-child(4) {
     margin: 0;
 }
 
@@ -761,7 +759,7 @@ main {
 }
 
 .testimonials__cards .card .description {
-    width: 300px;
+    width: 370px;
     text-align: left;
 }
 
