@@ -698,6 +698,7 @@ main {
 
 .main_testimonials {
     width: 100vw;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -706,7 +707,7 @@ main {
     background-color: #F5F5F5;
     padding: 50px 0;
     overflow: hidden;
-    position: relative; /* Añadir para posicionar las flechas */
+    position: relative;
 }
 
 .main_testimonials h2 {  
@@ -716,8 +717,9 @@ main {
 }
 
 .testimonials__cards {
-    width: 90%;
+    width: max-content;
     display: flex;
+    justify-content: flex-start;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     
@@ -728,13 +730,14 @@ main {
 }
 
 .testimonials__cards .card {
-    scroll-snap-align: center;
+    width: 600px;
     display: flex;
     align-items: center;
     background-color: #E6E6E6;
     padding: 30px;
     margin-right: 40px; 
     font-weight: 500;
+    scroll-snap-align: center;
 }
 
 .testimonials__cards .card .image {
@@ -751,6 +754,10 @@ main {
     text-align: left;
 }
 
+.testimonials__cards .card .description p {
+    font-size: 12px;
+}
+
 .testimonials__cards .card .description p:nth-child(2) {
     margin-top: 20px;
     color: #DA3731;
@@ -758,7 +765,7 @@ main {
 
 .arrow_left,
 .arrow_right {
-    width: 40px; /* Aumenta el tamaño para mejor visibilidad */
+    width: 40px;
     height: 40px;
     background-color: #DA3731;
     mask: url('./img/flecha.png') no-repeat center;
