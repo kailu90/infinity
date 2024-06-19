@@ -10,10 +10,10 @@ let percentage = 0;
 
 //Mueve el slider según la variable percentage
 
-/*function actualizarSlider() {
+function actualizarSlider() {
     slider.style.transition = "transform 1s ease";
     slider.style.transform = "translateX(" + percentage + "%)";     
-}*/
+}
 
 
 

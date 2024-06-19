@@ -699,7 +699,6 @@ main {
 
 
 
-
 /*******************?TESTIMONIALS*******************/
 
 /*Estilos de slider de los testimonios*/
@@ -727,7 +726,7 @@ main {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .slider_testimonials__cards {       
@@ -736,11 +735,10 @@ main {
 }
 
 .slider_cards_container {   
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    display: flex;   
+    justify-content: flex-start;
     margin: 0 auto; 
-    gap: auto; 
+    gap: 0px; 
     overflow: hidden;
 }
 
@@ -752,7 +750,6 @@ main {
     background-color: #E6E6E6;
     padding: 30px;
     font-weight: 500;
-    margin: 0 20px;
 }
 
 /*Se retira el margen derecho a última tarjeta para mejorar vista*/
@@ -852,7 +849,6 @@ main {
 }
 
 }
-
 
 
 
