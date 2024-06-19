@@ -511,6 +511,7 @@ main {
 }
 
 .main_programs p:nth-child(2) {
+    width: 100vw;
     max-width: 1000px;
     font-size: 20px;
     padding: 50px;
@@ -591,6 +592,10 @@ main {
         width: 80%;
         margin: 20px auto; 
         padding: 0;
+    }
+
+    .programs__cards {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -722,7 +727,7 @@ main {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .slider_testimonials__cards {       
@@ -732,14 +737,16 @@ main {
 
 .slider_cards_container {   
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 0 auto; 
     gap: auto; 
+    overflow: hidden;
 }
 
 .slider_testimonials__cards .card {
     min-width: 40vw;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     align-items: center;
     background-color: #E6E6E6;
