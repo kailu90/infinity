@@ -27,7 +27,7 @@ li {
 }
 
 main {
-    font-family: "Poppins", sans-serif;    
+    font-family: "Poppins", sans-serif;   
 }
 
 
@@ -42,12 +42,10 @@ main {
 /*Estilos del header*/
 
 .header_container {
-    width: 100vw; 
     background-color: #fff;   
 }
 
 .header {
-    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -96,7 +94,6 @@ main {
 /*Estilos de la primera sección de toda la landing page*/
 
 .main_banner {
-    width: 100vw;    
     display: flex;
     justify-content: space-around;     
     align-items: center; 
@@ -234,7 +231,6 @@ main {
 
 
 .main_partners {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -386,7 +382,6 @@ main {
 /*Estilos de la sección donde se puede agendar asesoria*/
 
 .main_schedule {
-    width: 100vw;
     display: flex;  
     align-items: center;
     justify-content: space-around;
@@ -433,6 +428,8 @@ main {
     font-weight: bold;    
     margin: 20px 0;
     cursor: pointer;
+    border: none;
+    font-size: 16px;
 }
 
 .main_schedule .image img {
@@ -496,7 +493,6 @@ main {
 /*Estilos de sección de los programas académicos, con tarjetas*/
 
 .main_programs {    
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -522,7 +518,6 @@ main {
 }
 
 .programs__cards {    
-    width: 100vw;
     max-width: 1000px;   
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -608,7 +603,6 @@ main {
 /*Estilos de sección que habla sobre hacer realidad tus sueños*/
 
 .main_dreams {   
-    width: 100vw;   
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -706,7 +700,6 @@ main {
 /*Estilos de slider de los testimonios*/
 
 .main_testimonials {
-    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -732,27 +725,27 @@ main {
     overflow: hidden;
 }
 
-.slider_testimonials__cards {  
-    width: 200vw;   
+.slider_testimonials__cards {       
     display: flex;
-    padding: 0 100px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .slider_cards_container {   
-    width: 200vw;
     display: flex;
-    margin: 0 auto;
-    padding: 0 30px;    
+    justify-content: center;
+    margin: 0 auto; 
+    gap: auto; 
 }
 
 .slider_testimonials__cards .card {
-    max-width: 600px;
+    min-width: 40vw;
+    max-width: 500px;
     display: flex;
     align-items: center;
     background-color: #E6E6E6;
     padding: 30px;
-    margin-right: 40px; 
     font-weight: 500;
+    margin: 0 20px;
 }
 
 /*Se retira el margen derecho a última tarjeta para mejorar vista*/
@@ -795,12 +788,12 @@ main {
 }
 
 .slider_marco .arrow_back {
-    left: 50px;
+    left: 0;
     transform: rotate(180deg);
 }
 
 .slider_marco .arrow_next {
-    right: 50px;
+    right: 0;
 }
 
 @media (max-width: 1024px) {
