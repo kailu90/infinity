@@ -27,9 +27,9 @@ function actualizarSlider() {
 //En este caso cada 10 segundos el slider va pasando
 
 setInterval(function () {        
-    percentage = index * - 100;
+    percentage = index * - 50;
     actualizarSlider();  
-    index++; 
+    index = index + 0.5; 
     if (index >= numElements) {
         index = 0; 
     }     
@@ -54,7 +54,7 @@ arrowBack.addEventListener("click" , function() {
     if (index === 0) {                
         index = numElements - 1;
     } else {
-        index--;
+        index = index - 0.5; 
     }
     percentage = index * -50;    
     actualizarSlider(); 
@@ -73,9 +73,9 @@ arrowNext.addEventListener("click" , function() {
     if (index === numElements - 1) {        
         index = 0;
     } else {
-        index++;
+        index = index + 0.5; 
     }
-    percentage = index * -100;    
+    percentage = index * - 50;    
     actualizarSlider();
 });
 
